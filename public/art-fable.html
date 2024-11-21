@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clementoni - MindBreakers</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- header section -->
+    <header>
+        <a href="/index.html" class="logo">
+            <img src="/img/logo.png" alt="Logo" class="logo-img"> MindBreakers
+        </a>       
+        <ul class="navlist">
+            <li><a href="#">Tienda</a></li>
+            <li><a href="/products.html">En Venta</a></li>
+            <li><a href="/novedades.html">Novedades</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Marcas</a>
+                <div class="dropdown-content">
+                    <a href="/clementoni.html">Clementoni</a>
+                    <a href="/art-fable.html">Art&Fable</a>
+                    <a href="/heye.html">Heye</a>
+                    <a href="/eeboo.html">eeboo</a>
+                    <a href="/ravensburger.html">Ravensburger</a>
+                </div>
+            </li>
+            <li><a href="/contacto.html">Contacto</a></li>
+        </ul>
+    
+        <div class="nav-right">
+            <a href="#" id="search-icon" aria-label="Buscar"><i class="ri-search-line"></i></a>
+            <input type="text" id="search-input" placeholder="Buscar producto" style="display: none;">
+            <a href="#" aria-label="Carrito de compras"><i class="ri-shopping-cart-line"></i></a>
+            <a href="#" id="user-icon" aria-label="Perfil de usuario"><i class="ri-user-line"></i></a>
+            <a href="#" id="logout-button" style="display: none;">Cerrar Sesión</a>
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>        
+    </header>
+    
+    <section id="search-results" style="display: none; padding: 20px;">
+        <h2>Resultados de búsqueda:</h2>
+        <div id="results-container"></div>
+    </section>
+    
+    <!-- Modal de Autenticación -->
+    <div id="auth-modal" class="auth-modal">
+        <div class="auth-modal-content">
+            <span class="auth-close" id="auth-close">&times;</span>
+            <!-- Formulario de inicio de sesión -->
+            <form id="login-form-auth">
+                <h2 id="auth-title">Iniciar sesión</h2>
+                <input type="email" placeholder="Correo electrónico" required>
+                <input type="password" placeholder="Contraseña" required>
+                <button type="submit" class="btn">Iniciar Sesión</button>
+                <p>¿No tienes cuenta? <a href="#" id="register-link">Regístrate</a></p>
+            </form>
+
+            <!-- Formulario de registro -->
+            <form id="register-form-auth" style="display: none;">
+                <h2 id="auth-title">Registrarse</h2>
+                <input type="text" placeholder="Nombre completo" required>
+                <input type="email" placeholder="Correo electrónico" required>
+                <input type="password" placeholder="Contraseña" required>
+                <button type="submit" class="btn">Registrarse</button>
+                <p>¿Ya tienes cuenta? <a href="#" id="login-link">Inicia sesión</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Sección de productos para Art&Fable -->
+    <section class="n-product">
+        <div class="center-text">
+            <h2>Art&Fable</h2>
+        </div>
+        <div class="n-content">
+            <!-- Copiar aquí los productos de la sección de "Todos los productos" en index.html -->
+            <div class="row">
+                <div class="row-img">
+                    <img src="img/r4.png" alt="" role="presentation">
+                </div>
+                <h3>ROMPECABEZAS ARTE</h3>
+                <div class="stars">
+                    <a><i class="ri-star-fill"></i></a>
+                    <a><i class="ri-star-fill"></i></a>
+                    <a><i class="ri-star-fill"></i></a>
+                    <a><i class="ri-star-fill"></i></a>
+                    <a><i class="ri-star-fill"></i></a>
+                    <a>4.5/5</a>
+                </div>
+
+                <div class="row-in">
+                    <div class="row-left">
+                        <a href="#">
+                            Añadir al carrito
+                            <i class="ri-shopping-cart-fill"></i>
+                        </a>
+                    </div>
+
+                    <div class="row-right">
+                        <h6>$15.00</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="row-img">
+                    <img src="img/r9.png" alt="" role="presentation">
+                </div>
+                <h3>ROMPECABEZAS JUGUETE</h3>
+                <div class="stars">
+                    <a><i class="ri-star-fill"></i></a>
+                    <a><i class="ri-star-fill"></i></a>
+                    <a><i class="ri-star-fill"></i></a>
+                    <a><i class="ri-star-fill"></i></a>
+                    <a>3.5/5</a>
+                </div>
+
+                <div class="row-in">
+                    <div class="row-left">
+                        <a href="#">
+                            Añadir al carrito
+                            <i class="ri-shopping-cart-fill"></i>
+                        </a>
+                    </div>
+
+                    <div class="row-right">
+                        <h6>$15.00</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="row-img">
+                    <img src="img/r5.png" alt="" role="presentation">
+                </div>
+                <h3>ROMPECABEZAS PINTURA</h3>
+                <div class="stars">
+                    <a><i class="ri-star-fill"></i></a>
+                    <a><i class="ri-star-fill"></i></a>
+                    <a><i class="ri-star-fill"></i></a>
+                    <a><i class="ri-star-fill"></i></a>
+                    <a><i class="ri-star-fill"></i></a>
+                    <a>4.5/5</a>
+                </div>
+
+                <div class="row-in">
+                    <div class="row-left">
+                        <a href="#">
+                            Añadir al carrito
+                            <i class="ri-shopping-cart-fill"></i>
+                        </a>
+                    </div>
+
+                    <div class="row-right">
+                        <h6>$15.00</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="row-img">
+                    <img src="img/r6.png" alt="" role="presentation">
+                </div>
+                <h3>ROMPECABEZAS VISTA</h3>
+                <div class="stars">
+                    <a><i class="ri-star-fill"></i></a>
+                    <a><i class="ri-star-fill"></i></a>
+                    <a><i class="ri-star-fill"></i></a>
+                    <a><i class="ri-star-fill"></i></a>
+                    <a><i class="ri-star-fill"></i></a>
+                    <a>4.5/5</a>
+                </div>
+
+                <div class="row-in">
+                    <div class="row-left">
+                        <a href="#">
+                            Añadir al carrito
+                            <i class="ri-shopping-cart-fill"></i>
+                        </a>
+                    </div>
+
+                    <div class="row-right">
+                        <h6>$15.00</h6>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="footer">
+        <div class="footer-box">
+            <h3>Company</h3>
+            <a href="#">About</a>
+            <a href="#">Features</a>
+            <a href="#">Works</a>
+            <a href="#">Career</a>
+        </div>
+        <div class="footer-box">
+            <h3>FAQ</h3>
+            <a href="#">About</a>
+            <a href="#">Features</a>
+            <a href="#">Works</a>
+            <a href="#">Career</a>
+        </div>
+        <div class="footer-box">
+            <h3>Resources</h3>
+            <a href="#">About</a>
+            <a href="#">Features</a>
+            <a href="#">Works</a>
+        </div>
+        <div class="footer-box">
+            <h3>Social</h3>
+            <div class="social">
+                <a href="#" aria-label="Visítanos en Facebook"><i class="ri-facebook-fill"></i></a>
+                <a href="#" aria-label="Visítanos en Instagram"><i class="ri-instagram-fill"></i></a>
+                <a href="#" aria-label="Visítanos en Twitter"><i class="ri-twitter-fill"></i></a>
+            </div>
+        </div>
+    </section>
+
+        <!-- Inicio de Sesión -->
+    <!-- Modal de inicio de sesión / registro -->
+<div id="auth-modal" class="auth-modal">
+    <div class="auth-modal-content">
+        <span class="auth-close" id="auth-close">&times;</span>
+        
+        
+        <!-- Formulario de inicio de sesión -->
+        <form id="login-form">
+            <h2 id="auth-title">Iniciar sesión</h2>
+            <input type="email" placeholder="Correo electrónico" required>
+            <input type="password" placeholder="Contraseña" required>
+            <button type="submit" class="btn">Iniciar Sesión</button>
+            <p><br>¿No tienes cuenta? <a href="#" id="register-link">Regístrate</a></p>
+        </form>
+        
+        <!-- Formulario de registro -->
+        <form id="register-form" style="display: none;">
+            <h2 id="auth-title">Registrarse</h2>
+            <input type="text" placeholder="Nombre completo" required>
+            <input type="email" placeholder="Correo electrónico" required>
+            <input type="password" placeholder="Contraseña" required>
+            <button type="submit" class="btn">Registrarse</button>
+            <p><br>¿Ya tienes cuenta? <a href="#" id="login-link">Inicia sesión</a></p>
+        </form>
+    </div>
+</div>
+    <script src="/js/script.js" type="module"></script>
+</body>
+</html>

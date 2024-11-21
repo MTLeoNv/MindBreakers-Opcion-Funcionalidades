@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindBreakers</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+    <!-- box-icons link -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <!-- remix-icons link -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <!-- google fonts link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- header section -->
+    <header>
+        <a href="/index.html" class="logo">
+            <img src="/img/logo.png" alt="Logo" class="logo-img"> MindBreakers
+        </a>       
+        <ul class="navlist">
+            <li><a href="#">Tienda</a></li>
+            <li><a href="/products.html">En Venta</a></li>
+            <li><a href="/novedades.html">Novedades</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Marcas</a>
+                <div class="dropdown-content">
+                    <a href="/clementoni.html">Clementoni</a>
+                    <a href="/art-fable.html">Art&Fable</a>
+                    <a href="/heye.html">Heye</a>
+                    <a href="/eeboo.html">eeboo</a>
+                    <a href="/ravensburger.html">Ravensburger</a>
+                </div>
+            </li>
+            <li><a href="/contacto.html">Contacto</a></li>
+        </ul>
+    
+        <div class="nav-right">
+            <a href="#" id="search-icon" aria-label="Buscar"><i class="ri-search-line"></i></a>
+            <input type="text" id="search-input" placeholder="Buscar producto" style="display: none;">
+            <a href="#" aria-label="Carrito de compras"><i class="ri-shopping-cart-line"></i></a>
+            <a href="#" id="user-icon" aria-label="Perfil de usuario"><i class="ri-user-line"></i></a>
+            <a href="#" id="logout-button" style="display: none;">Cerrar Sesión</a>
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>        
+    </header>
+    
+    <section id="search-results" style="display: none; padding: 20px;">
+        <h2>Resultados de búsqueda:</h2>
+        <div id="results-container"></div>
+    </section>
+    
+    <!-- Modal de Autenticación -->
+    <div id="auth-modal" class="auth-modal">
+        <div class="auth-modal-content">
+            <span class="auth-close" id="auth-close">&times;</span>
+            <!-- Formulario de inicio de sesión -->
+            <form id="login-form-auth">
+                <h2 id="auth-title">Iniciar sesión</h2>
+                <input type="email" placeholder="Correo electrónico" required>
+                <input type="password" placeholder="Contraseña" required>
+                <button type="submit" class="btn">Iniciar Sesión</button>
+                <p>¿No tienes cuenta? <a href="#" id="register-link">Regístrate</a></p>
+            </form>
+
+            <!-- Formulario de registro -->
+            <form id="register-form-auth" style="display: none;">
+                <h2 id="auth-title">Registrarse</h2>
+                <input type="text" placeholder="Nombre completo" required>
+                <input type="email" placeholder="Correo electrónico" required>
+                <input type="password" placeholder="Contraseña" required>
+                <button type="submit" class="btn">Registrarse</button>
+                <p>¿Ya tienes cuenta? <a href="#" id="login-link">Inicia sesión</a></p>
+            </form>
+        </div>
+    </div>
+        
+    <!-- home section -->
+     <section class="home">
+        <div class="home-text">
+            <h6>NUEVOS DESAFÍOS</h6>
+            <h1>PREPARADOS PARA<br>PONER A PRUEBA TU INGENIO!!</h1>
+            <p>EXPLORA Y ADQUIERE NUESTRA ÚLTIMA COLECCIÓN DE ROMPECABEZAS, CREADA PARA AMANTES DE LOS DESAFÍOS Y LA CREATIVIDAD.</p>
+            <a href="/products.html" class="btn">Comprar ahora<i class="ri-arrow-right-line"></i></a>
+        </div>
+     </section>
+
+    <!-- brands section -->
+     <div class="brands">
+        <div class="main-brands">
+            <div class="brands-c">
+                <img src="img/m1.png" alt="" role="presentation">
+            </div>
+            <div class="brands-c">
+                <img src="img/m2.png" alt="" role="presentation">
+            </div>
+            <div class="brands-c">
+                <img src="img/m3.png" alt="" role="presentation">
+            </div>
+            <div class="brands-c">
+                <img src="img/m4.png" alt="" role="presentation">
+            </div>
+            <div class="brands-c">
+                <img src="img/m5.png" alt="" role="presentation">
+            </div>
+        </div>
+     </div>
+
+    <!-- all product section -->
+     <section class="n-product">
+        <div class="center-text">
+            <h2>Todos los productos</h2>
+        </div>
+
+        <div class="n-content">
+            <div class="row">
+                <div class="row-img">
+                    <img src="img/r1.png" alt="" role="presentation">
+                </div>
+                <h3>ROMPECABEZAS ARCOIRIS</h3>
+                <div class="stars">
+                    <a><i class="ri-star-fill"></i></a>
+                    <a><i class="ri-star-fill"></i></a>
+                    <a><i class="ri-star-fill"></i></a>
+                    <a><i class="ri-star-fill"></i></a>
+                    <a><i class="ri-star-fill"></i></a>
+                    <a>5/5</a>
+                </div>
+
+                <div class="row-in">
+                    <div class="row-left">
+                        <a href="#">
+                            Añadir al carrito
+                            <i class="ri-shopping-cart-fill"></i>
+                        </a>
+                    </div>
+
+                    <div class="row-right">
+                        <h6>$15.00</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="row-img">
+                    <img src="img/r2.png" alt="" role="presentation">
+                </div>
+                <h3>ROMPECABEZAS GATO</h3>
+                <div class="stars">
+                    <a><i class="ri-star-fill"></i></a>
+                    <a><i class="ri-star-fill"></i></a>
+                    <a><i class="ri-star-fill"></i></a>
+                    <a><i class="ri-star-fill"></i></a>
+                    <a>4/5</a>
+                </div>
+
+                <div class="row-in">
+                    <div class="row-left">
+                        <a href="#">
+                            Añadir al carrito
+                            <i class="ri-shopping-cart-fill"></i>
+                        </a>
+                    </div>
+
+                    <div class="row-right">
+                        <h6>$15.00</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="row-img">
+                    <img src="img/r3.png" alt="" role="presentation">
+                </div>
+                <h3>ROMPECABEZAS ARTE</h3>
+                <div class="stars">
+                    <a><i class="ri-star-fill"></i></a>
+                    <a><i class="ri-star-fill"></i></a>
+                    <a><i class="ri-star-fill"></i></a>
+                    <a><i class="ri-star-fill"></i></a>
+                    <a><i class="ri-star-fill"></i></a>
+                    <a>5/5</a>
+                </div>
+
+                <div class="row-in">
+                    <div class="row-left">
+                        <a href="#">
+                            Añadir al carrito
+                            <i class="ri-shopping-cart-fill"></i>
+                        </a>
+                    </div>
+
+                    <div class="row-right">
+                        <h6>$15.00</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="row-img">
+                    <img src="img/r4.png" alt="" role="presentation">
+                </div>
+                <h3>ROMPECABEZAS ARTE</h3>
+                <div class="stars">
+                    <a><i class="ri-star-fill"></i></a>
+                    <a><i class="ri-star-fill"></i></a>
+                    <a><i class="ri-star-fill"></i></a>
+                    <a><i class="ri-star-fill"></i></a>
+                    <a><i class="ri-star-fill"></i></a>
+                    <a>4.5/5</a>
+                </div>
+
+                <div class="row-in">
+                    <div class="row-left">
+                        <a href="#">
+                            Añadir al carrito
+                            <i class="ri-shopping-cart-fill"></i>
+                        </a>
+                    </div>
+
+                    <div class="row-right">
+                        <h6>$15.00</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="row-img">
+                    <img src="img/r5.png" alt="" role="presentation">
+                </div>
+                <h3>ROMPECABEZAS PINTURA</h3>
+                <div class="stars">
+                    <a><i class="ri-star-fill"></i></a>
+                    <a><i class="ri-star-fill"></i></a>
+                    <a><i class="ri-star-fill"></i></a>
+                    <a><i class="ri-star-fill"></i></a>
+                    <a><i class="ri-star-fill"></i></a>
+                    <a>4.5/5</a>
+                </div>
+
+                <div class="row-in">
+                    <div class="row-left">
+                        <a href="#">
+                            Añadir al carrito
+                            <i class="ri-shopping-cart-fill"></i>
+                        </a>
+                    </div>
+
+                    <div class="row-right">
+                        <h6>$15.00</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="row-img">
+                    <img src="img/r6.png" alt="" role="presentation">
+                </div>
+                <h3>ROMPECABEZAS VISTA</h3>
+                <div class="stars">
+                    <a><i class="ri-star-fill"></i></a>
+                    <a><i class="ri-star-fill"></i></a>
+                    <a><i class="ri-star-fill"></i></a>
+                    <a><i class="ri-star-fill"></i></a>
+                    <a><i class="ri-star-fill"></i></a>
+                    <a>4.5/5</a>
+                </div>
+
+                <div class="row-in">
+                    <div class="row-left">
+                        <a href="#">
+                            Añadir al carrito
+                            <i class="ri-shopping-cart-fill"></i>
+                        </a>
+                    </div>
+
+                    <div class="row-right">
+                        <h6>$15.00</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="row-img">
+                    <img src="img/r7.png" alt="" role="presentation">
+                </div>
+                <h3>ROMPECABEZAS FLORES</h3>
+                <div class="stars">
+                    <a><i class="ri-star-fill"></i></a>
+                    <a><i class="ri-star-fill"></i></a>
+                    <a><i class="ri-star-fill"></i></a>
+                    <a><i class="ri-star-fill"></i></a>
+                    <a><i class="ri-star-fill"></i></a>
+                    <a>4.5/5</a>
+                </div>
+
+                <div class="row-in">
+                    <div class="row-left">
+                        <a href="#">
+                            Añadir al carrito
+                            <i class="ri-shopping-cart-fill"></i>
+                        </a>
+                    </div>
+
+                    <div class="row-right">
+                        <h6>$15.00</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="row-img">
+                    <img src="img/r8.png" alt="" role="presentation">
+                </div>
+                <h3>ROMPECABEZAS TORRE</h3>
+                <div class="stars">
+                    <a><i class="ri-star-fill"></i></a>
+                    <a><i class="ri-star-fill"></i></a>
+                    <a><i class="ri-star-fill"></i></a>
+                    <a><i class="ri-star-fill"></i></a>
+                    <a><i class="ri-star-fill"></i></a>
+                    <a>5/5</a>
+                </div>
+
+                <div class="row-in">
+                    <div class="row-left">
+                        <a href="#">
+                            Añadir al carrito
+                            <i class="ri-shopping-cart-fill"></i>
+                        </a>
+                    </div>
+
+                    <div class="row-right">
+                        <h6>$15.00</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="row-img">
+                    <img src="img/r9.png" alt="" role="presentation">
+                </div>
+                <h3>ROMPECABEZAS JUGUETE</h3>
+                <div class="stars">
+                    <a><i class="ri-star-fill"></i></a>
+                    <a><i class="ri-star-fill"></i></a>
+                    <a><i class="ri-star-fill"></i></a>
+                    <a><i class="ri-star-fill"></i></a>
+                    <a>3.5/5</a>
+                </div>
+
+                <div class="row-in">
+                    <div class="row-left">
+                        <a href="#">
+                            Añadir al carrito
+                            <i class="ri-shopping-cart-fill"></i>
+                        </a>
+                    </div>
+
+                    <div class="row-right">
+                        <h6>$15.00</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="row-img">
+                    <img src="img/r10.png" alt="" role="presentation">
+                </div>
+                <h3>ROMPECABEZAS DALI</h3>
+                <div class="stars">
+                    <a><i class="ri-star-fill"></i></a>
+                    <a><i class="ri-star-fill"></i></a>
+                    <a><i class="ri-star-fill"></i></a>
+                    <a><i class="ri-star-fill"></i></a>
+                    <a>3.5/5</a>
+                </div>
+
+                <div class="row-in">
+                    <div class="row-left">
+                        <a href="#">
+                            Añadir al carrito
+                            <i class="ri-shopping-cart-fill"></i>
+                        </a>
+                    </div>
+
+                    <div class="row-right">
+                        <h6>$15.00</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="n-btn">
+            <a href="/products.html" class="btn2">Ver todos los productos</a>
+        </div>
+
+     </section>
+
+    <!-- feature section -->
+     <section class="feature">
+        <div class="feature-content">
+            <div class="box">
+                <div class="f-icon">
+                    <i class="ri-bank-card-fill"></i>   
+                </div>
+                <div class="f-text">
+                    <h3>Pago seguro</h3>
+                    <p>Realiza compras en línea con total seguridad usando tu tarjeta de crédito o débito.</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="f-icon">
+                    <i class="ri-customer-service-fill"></i>
+                </div>
+                <div class="f-text">
+                    <h3>Reembolso</h3>
+                    <p>Ofrecemos reembolsos en caso de problemas con tu compra.</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="f-icon">
+                    <i class="ri-truck-fill"></i>
+                </div>
+                <div class="f-text">
+                    <h3>Envío gratis</h3>
+                    <p>Disfruta de envío gratuito en pedidos seleccionados.</p>
+                </div>
+            </div>            
+        </div>
+     </section>
+
+    <!-- Best selling -->
+    <section class="selling">
+        <div class="center-text">
+            <h2>Los más vendidos</h2>
+        </div>
+        <div class="selling-content">
+            <div class="col">
+                <div class="col-img">
+                    <img src="img/r1.png" alt="" role="presentation">
+                </div>
+                <div class="col-icon">
+                    <a href="#" aria-label="Añadir a favoritos"><i class="ri-heart-line"></i></a>
+                    <a href="#" aria-label="Ver detalles del producto"><i class="ri-eye-line"></i></a>
+                    <a href="#" aria-label="Carrito de compras"><i class="ri-shopping-cart-line"></i></a>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="col-img">
+                    <img src="img/r7.png" alt="" role="presentation">
+                </div>
+                <div class="col-icon">
+                    <a href="#" aria-label="Añadir a favoritos"><i class="ri-heart-line"></i></a>
+                    <a href="#" aria-label="Ver detalles del producto"><i class="ri-eye-line"></i></a>
+                    <a href="#" aria-label="Carrito de compras"><i class="ri-shopping-cart-line"></i></a>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="col-img">
+                    <img src="img/r4.png" alt="" role="presentation">
+                </div>
+                <div class="col-icon">
+                    <a href="#" aria-label="Añadir a favoritos"><i class="ri-heart-line"></i></a>
+                    <a href="#" aria-label="Ver detalles del producto"><i class="ri-eye-line"></i></a>
+                    <a href="#" aria-label="Carrito de compras"><i class="ri-shopping-cart-line"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- newletter section -->
+     <section class="newletter">
+        <div class="newletter-content">
+            <div class="newletter-text">
+                <h2>Unete a la lista!!</h2>
+                <p>Regístrese con su dirección de correo electrónico para recibir actualizaciones.</p>
+            </div>
+            <form action="">
+                <input type="email" placeholder="Correo..." required>
+                <input type="submit" value="Suscribirse" class="btnnn">
+            </form>
+        </div>
+     </section>
+    <!-- footer -->
+     <section class="footer">
+        <div class="footer-box">
+            <h3>Company</h3>
+            <a href="#">About</a>
+            <a href="#">Features</a>
+            <a href="#">Works</a>
+            <a href="#">Career</a>
+        </div>
+        <div class="footer-box">
+            <h3>FAQ</h3>
+            <a href="#">About</a>
+            <a href="#">Features</a>
+            <a href="#">Works</a>
+            <a href="#">Career</a>
+        </div>
+        <div class="footer-box">
+            <h3>Resources</h3>
+            <a href="#">About</a>
+            <a href="#">Features</a>
+            <a href="#">Works</a>
+        </div>
+        <div class="footer-box">
+            <h3>Social</h3>
+            <div class="social">
+                <a href="#" aria-label="Visítanos en Facebook"><i class="ri-facebook-fill"></i></a>
+                <a href="#" aria-label="Visítanos en Instagram"><i class="ri-instagram-fill"></i></a>
+                <a href="#" aria-label="Visítanos en Twitter"><i class="ri-twitter-fill"></i></a>
+            </div>
+        </div>
+     </section>
+    <!-- copyright -->
+     <div class="copyright">
+        <div class="end-text">
+            <p>CopyRight 2024 MindBreakers</p>
+        </div>
+        <div class="end-img">
+            <img src="img/p.png" alt="" role="presentation">
+        </div>
+     </div>
+
+    <!-- Inicio de Sesión -->
+    <!-- Modal de inicio de sesión / registro -->
+<div id="auth-modal" class="auth-modal">
+    <div class="auth-modal-content">
+        <span class="auth-close" id="auth-close">&times;</span>
+        
+        
+        <!-- Formulario de inicio de sesión -->
+        <form id="login-form">
+            <h2 id="auth-title">Iniciar sesión</h2>
+            <input type="email" placeholder="Correo electrónico" required>
+            <input type="password" placeholder="Contraseña" required>
+            <button type="submit" class="btn">Iniciar Sesión</button>
+            <p><br>¿No tienes cuenta? <a href="#" id="register-link">Regístrate</a></p>
+        </form>
+        
+        <!-- Formulario de registro -->
+        <form id="register-form" style="display: none;">
+            <h2 id="auth-title">Registrarse</h2>
+            <input type="text" placeholder="Nombre completo" required>
+            <input type="email" placeholder="Correo electrónico" required>
+            <input type="password" placeholder="Contraseña" required>
+            <button type="submit" class="btn">Registrarse</button>
+            <p><br>¿Ya tienes cuenta? <a href="#" id="login-link">Inicia sesión</a></p>
+        </form>
+    </div>
+</div>
+    <!-- custom js link -->
+    <script src="/js/script.js" type="module"></script>
+    <div id="custom-alert" class="custom-alert" style="display: none;">
+        <p id="custom-alert-message"></p>
+        <button id="custom-alert-close" class="custom-alert-close">Aceptar</button>
+    </div>    
+</body>
+</html>
